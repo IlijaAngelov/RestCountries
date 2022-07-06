@@ -1,22 +1,16 @@
 <?php
 session_start();
-$uid = $_SESSION['uid'];
+$uid = $_SESSION['id'];
 require "database/Connection.php";
 require "src/Country.php";
-require "index.php";
-//use BtoBet;
+require "partials/header.php";
 
 $pdo = Connection::make();
 $fav = new \BtoBet\Country($pdo);
 $countries = $fav->getFavCountries($uid);
 
-
-//$url = "https://restcountries.com/v3.1/all";
-//$json_data = file_get_contents($url);
-//$countries = json_decode($json_data);
-
 ?>
-<h1>ALL COUNTRIES</h1>
+<h1>My Favourite Countries</h1>
 <div class="flex-container">
     <?php foreach($countries as $country){ ?>
         <div class="card">

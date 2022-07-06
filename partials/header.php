@@ -11,7 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="axios.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -24,6 +23,9 @@
             <li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout <?= $_SESSION['username']; ?></a></li>
             <?php } else { ?>
             <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Log In</a></li>
+            <?php } ?>
+            <?php if(isset($_SESSION['id'])) { ?>
+            <li><a href="myFavourites.php"><span class="glyphicon glyphicon-log-in"></span> My Favourites</a></li>
             <?php } ?>
         </ul>
     </div>

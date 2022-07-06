@@ -1,6 +1,6 @@
 <?php
 session_start();
-$uid = $_SESSION['uid'];
+$uid = $_SESSION['id'];
 
 require "database/Connection.php";
 require "src/Country.php";

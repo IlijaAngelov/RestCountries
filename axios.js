@@ -1,5 +1,4 @@
 const getBtn = document.getElementById('get-btn');
-// const postBtn = document.getElementById('post-btn');
 
 const getData = () => {
     axios.get('https://restcountries.com/v3.1/all')
